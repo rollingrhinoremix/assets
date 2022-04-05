@@ -95,8 +95,6 @@ alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias rhino-init="sudo bash ~/.sources.sh && sudo apt update && sudo apt upgrade -y"
-alias rhino-update="mkdir ~/rhinoupdate && mkdir ~/rhinoupdate/kernel && mkdir ~/rhinoupdate/script/ && git clone https://github.com/ubunturolling/rhino-update ~/rhinoupdate/script && sudo bash ~/rhinoupdate/script/update.sh && rm -rf ~/rhinoupdate"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -117,3 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion  
   fi
 fi
+
+# Rhino aliases
+alias rhino-init="mkdir ~/.rhino && mkdir ~/.rhino/updates && mkdir ~/.rhino/config && touch ~/.rhino/updates/configuration && sudo bash ~/.sources.sh && sudo apt update && sudo apt upgrade -y"
+alias rhino-update="mkdir ~/rhinoupdate && mkdir ~/rhinoupdate/kernel && mkdir ~/rhinoupdate/script/ && git clone https://github.com/rollingrhinoremix/rhino-update ~/rhinoupdate/script && bash ~/rhinoupdate/script/update.sh && rm -rf ~/rhinoupdate"
