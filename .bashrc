@@ -117,5 +117,6 @@ if ! shopt -oq posix; then
 fi
 
 # Rhino aliases
-alias rhino-init="mkdir ~/.rhino && mkdir ~/.rhino/updates && mkdir ~/.rhino/config && touch ~/.rhino/updates/configuration && sudo bash ~/.sources.sh && sudo apt update && sudo apt upgrade -y"
-alias rhino-update="mkdir ~/rhinoupdate && mkdir ~/rhinoupdate/kernel && mkdir ~/rhinoupdate/script/ && git clone https://github.com/rollingrhinoremix/rhino-update ~/rhinoupdate/script && bash ~/rhinoupdate/script/update.sh && rm -rf ~/rhinoupdate"
+alias rhino-init="mkdir -p ~/.rhino/{updates,config} && touch ~/.rhino/updates/configuration && sudo bash ~/.sources.sh && sudo apt update && sudo apt upgrade -y"
+alias rhino-update="mkdir -p ~/rhinoupdate/{kernel,script} && git clone https://github.com/rollingrhinoremix/rhino-update ~/rhinoupdate/script && bash ~/rhinoupdate/script/update.sh && rm -rf ~/rhinoupdate"
+alias rhino-config="mkdir ~/.rhino/config/config-script && git clone https://github.com/rollingrhinoremix/rhino-config ~/.rhino/config/config-script/ && python3 ~/.rhino/config/config-script/config.py && rm -rf ~/.rhino/config/config-script"
