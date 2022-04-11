@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 countryCode=$(locale | awk -F"[_.]" '/LANG/{print tolower($2)}')
 
-cat >> /etc/apt/sources.list << REPOS
+cat > /etc/apt/sources.list << REPOS
 deb http://$countryCode.archive.ubuntu.com/ubuntu/ devel main restricted
 deb http://$countryCode.archive.ubuntu.com/ubuntu/ devel-updates main restricted
 deb http://$countryCode.archive.ubuntu.com/ubuntu/ devel universe
