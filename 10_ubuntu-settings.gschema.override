@@ -9,8 +9,8 @@ notify-with-tray=false
 favorite-apps = [ 'ubuntu-desktop-installer_ubuntu-desktop-installer.desktop', 'ubiquity.desktop', 'firefox_firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'libreoffice-writer.desktop', 'snap-store_ubuntu-software.desktop', 'yelp.desktop' ]
 
 [org.gnome.desktop.background]
-picture-uri = 'file:///usr/share/backgrounds/rolling-rhino.png'
-picture-uri-dark = 'file:///usr/share/backgrounds/rolling-rhino.png'
+picture-uri = 'file:///usr/share/backgrounds/rolling_rhino.png'
+picture-uri-dark = 'file:///usr/share/backgrounds/rolling_rhino-dark.png'
 
 [org.gnome.desktop.screensaver]
 picture-uri = 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
