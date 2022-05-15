@@ -1,7 +1,5 @@
-# Rolling Rhino Remix - Distro
-This repository is a collection of assets and scripts used in the creation of Rolling Rhino Remix. We have a full documented guide on how to create your own disk image of Rolling Rhino Remix.
-
-The full documented guide for how to create your own disk image of Rolling Rhino Remix will guide you through the creation process of a disk image file with all of the assets and scripts we have provided. You will be able to find the guide [here](https://rollingrhinoremix.github.io/docs-create).
+# Rolling Rhino Remix - Assets (Ubuntu Desktop ISO)
+This repository is a collection of assets and scripts used in the creation of Rolling Rhino Remix Desktop Edition. Rolling Rhino Remix Desktop Edition utilises the Ubuntu Desktop (GNOME with modifications) to provide a simple, easy out-of-the-box experience.
 
 #### Credits:
 - Assets created by: [MrBeeBenson](https://mrbeebenson.github.io)
