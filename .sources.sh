@@ -1,4 +1,4 @@
-echo "deb http://gb.archive.ubuntu.com/ubuntu/ devel main restricted" > /etc/apt/sources.list
+echo "deb http://archive.ubuntu.com/ubuntu/ devel main restricted" > /etc/apt/sources.list
 
 cat >> /etc/apt/sources.list << REPOS
 deb mirror://mirrors.ubuntu.com/mirrors.txt devel-updates main restricted
