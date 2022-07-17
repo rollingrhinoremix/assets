@@ -112,6 +112,39 @@ if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion  
+    . /etc/bash_completion
   fi
 fi
+
+rhino-init() {
+
+    mkdir -p ~/.rhino/{updates,config}
+
+    # Create files
+    for rhinoFile in ~/.rhino/updates/configuration ~/.rhino/updates/config-v2; do
+
+        : > "${rhinoFile}"
+    done
+
+    sudo apt update && sudo apt upgrade -y
+}
+
+rhino-up() {
+
+    mkdir -p ~/rhinoupdate/{kernel,script}
+
+    git clone https://github.com/rollingrhinoremix/rhino-update ~/rhinoupdate/script
+
+    # Add necessary permissions if unset.
+    updateScript="${HOME}/rhinoupdate/script/update.sh"
+
+    [[ -x "${updateScript}" ]] || {
+
+        chmod +x "${updateScript}"
+    }
+
+    # Execute script
+    "${HOME}"/rhinoupdate/script/update.sh
+
+    rm -rf "${HOME}"/rhinoupdate
+}
